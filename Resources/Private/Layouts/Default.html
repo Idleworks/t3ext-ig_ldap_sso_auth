@@ -1,12 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"
       xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
       data-namespace-typo3-fluid="true">
-
+<!-- @todo refactor js to match new requireJS namespaces and autoloading ! -->
 <f:be.container
     includeCssFiles="{0: '{f:uri.resource(path:\'Styles/styles.css\')}'}"
     includeJsFiles="{
-        0: '{f:uri.resource(path:\'JavaScript/search.js\')}',
-        1: '{f:uri.resource(path:\'JavaScript/import.js\')}'
+        0: '{f:uri.resource(extensionName:\'Core\', path:\'JavaScript/Contrib/jquery/jquery.js\')}',
+        1: '{f:uri.resource(path:\'JavaScript/search.js\')}',
+        2: '{f:uri.resource(path:\'JavaScript/import.js\')}'
     }"
 >
     <div class="typo3-fullDoc" id="ext-reports-mod-index-php">
